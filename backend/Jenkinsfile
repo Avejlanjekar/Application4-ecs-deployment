@@ -21,10 +21,10 @@ pipeline {
 
         ECS_CLUSTER = 'Application-4-cluster'
 
-        ECS_SERVICE_DEV = 'app4-backend-dev-dev'
-        ECS_SERVICE_QA = 'app4-backend-dev-qa'
-        ECS_SERVICE_UAT = 'app4-backend-dev-uat'
-        ECS_SERVICE_PROD = 'app4-backend-dev-prod'
+        ECS_SERVICE_DEV = 'app4-backend-dev'
+        ECS_SERVICE_QA = 'app4-backend-qa'
+        ECS_SERVICE_UAT = 'app4-backend-uat'
+        ECS_SERVICE_PROD = 'app4-backend-prod'
 
         ECS_TASK_FAMILY = 'app4-backend'
     }
