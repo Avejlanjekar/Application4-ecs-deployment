@@ -37,7 +37,7 @@
         },
         {
           "name": "PG_HOST",
-          "value": "app4-db-{ENV}.app4.local"
+          "value": "app4-db-${ENV}.app4.local"
         }
       ],
       "environmentFiles": [],
