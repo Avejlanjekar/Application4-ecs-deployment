@@ -296,7 +296,7 @@ def promoteImage(String sourceImage, String targetImage) {
     }
 
 
-    echo "Image promoted successfully"
+    echo "Image promoted"
 
     echo "${env.ECR_REGISTRY}/${targetImage}:${params.IMAGE_TAG}"
 }
