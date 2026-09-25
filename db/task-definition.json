@@ -1,0 +1,48 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "app4-db",
+      "image": "288497659312.dkr.ecr.ap-south-1.amazonaws.com/app4-db-${ENV}:${COMMIT_ID}",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "containerPort": 5432,
+          "hostPort": 5432,
+          "protocol": "tcp",
+          "name": "app4-db-5432-tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true,
+      "environment": [
+        {
+          "name": "POSTGRES_PASSWORD",
+          "value": "mysecretpassword"
+        }
+      ],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "ulimits": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/app4-db",
+          "awslogs-create-group": "true",
+          "awslogs-region": "ap-south-1",
+          "awslogs-stream-prefix": "ecs"
+        },
+        "secretOptions": []
+      },
+      "systemControls": []
+    }
+  ],
+  "family": "app4-db",
+  "executionRoleArn": "arn:aws:iam::288497659312:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "1024",
+  "memory": "2048"
+}
