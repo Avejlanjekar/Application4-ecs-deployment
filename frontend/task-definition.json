@@ -9,12 +9,17 @@
           "containerPort": 80,
           "hostPort": 80,
           "protocol": "tcp",
-          "name": "app4-frontend-3000-tcp",
+          "name": "app4-frontend-80-tcp",
           "appProtocol": "http"
         }
       ],
       "essential": true,
-      "environment": [],
+      "environment": [
+        {
+          "name": "ENV",
+          "value": "${ENV}"
+        }
+      ],
       "environmentFiles": [],
       "mountPoints": [],
       "volumesFrom": [],
